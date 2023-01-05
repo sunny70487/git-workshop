@@ -1,0 +1,19 @@
+[tool.pdm]
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.0.1"
+tag_format = "$version"
+[project]
+name = ""
+version = ""
+description = ""
+authors = [
+    {name = "hansonlin", email = "cfps91155@gmail.com"},
+]
+dependencies = [
+    "commitizen>=2.39.1",
+    "pre-commit>=2.21.0",
+]
+requires-python = ">=3.10"
+license = {text = "MIT"}
