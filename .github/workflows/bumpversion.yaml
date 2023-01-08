@@ -13,13 +13,10 @@ jobs:
     steps:
       - name: Check out
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          token: "${{ secrets.GITHUB_TOKEN }}"
       - id: cz
         name: Create bump and changelog
         uses: commitizen-tools/commitizen-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.BUMPVERSION_TOKEN }}
       - name: Print Version
         run: echo "Bumped to version ${{ steps.cz.outputs.version }}"
