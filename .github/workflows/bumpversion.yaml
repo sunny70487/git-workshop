@@ -3,7 +3,7 @@ name: Bump version
 on:
   push:
     branches:
-      - ci-test
+      - main
 
 jobs:
   bump-version:
